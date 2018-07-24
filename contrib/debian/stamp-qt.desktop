@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=STAMP
+Comment=STAMP P2P Cryptocurrency
+Comment[fr]=STAMP, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=STAMP, eşten eşe kriptografik sanal para birimi
+Exec=stamp-qt %u
+Terminal=false
+Type=Application
+Icon=stamp128
+MimeType=x-scheme-handler/stamp;
+Categories=Office;Finance;

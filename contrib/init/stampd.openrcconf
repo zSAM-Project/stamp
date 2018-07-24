@@ -1,0 +1,26 @@
+# /etc/conf.d/stampd: config file for /etc/init.d/stampd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/stamp/stamp.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/stampd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/stampd.pid"
+
+# Where to write stampd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/stampd"
+
+# User and group to own stampd process
+#BITCOIND_USER="stamp"
+#BITCOIND_GROUP="stamp"
+
+# Path to stampd executable
+#BITCOIND_BIN="/usr/bin/stampd"
+
+# Nice value to run stampd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

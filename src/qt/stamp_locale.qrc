@@ -1,0 +1,35 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/stamp_bg.qm</file>
+        <file alias="ca">locale/stamp_ca.qm</file>
+        <file alias="cs">locale/stamp_cs.qm</file>
+        <file alias="da">locale/stamp_da.qm</file>
+        <file alias="de">locale/stamp_de.qm</file>
+        <file alias="en">locale/stamp_en.qm</file>
+        <file alias="en_US">locale/stamp_en_US.qm</file>
+        <file alias="es">locale/stamp_es.qm</file>
+        <file alias="es_ES">locale/stamp_es_ES.qm</file>
+        <file alias="fi">locale/stamp_fi.qm</file>
+        <file alias="fr_FR">locale/stamp_fr_FR.qm</file>
+        <file alias="hi_IN">locale/stamp_hi_IN.qm</file>
+        <file alias="hr">locale/stamp_hr.qm</file>
+        <file alias="hr_HR">locale/stamp_hr_HR.qm</file>
+        <file alias="it">locale/stamp_it.qm</file>
+        <file alias="ja">locale/stamp_ja.qm</file>
+        <file alias="ko_KR">locale/stamp_ko_KR.qm</file>
+        <file alias="lt_LT">locale/stamp_lt_LT.qm</file>
+        <file alias="nl">locale/stamp_nl.qm</file>
+        <file alias="pl">locale/stamp_pl.qm</file>
+        <file alias="pt">locale/stamp_pt.qm</file>
+        <file alias="pt_BR">locale/stamp_pt_BR.qm</file>
+        <file alias="ro_RO">locale/stamp_ro_RO.qm</file>
+        <file alias="ru">locale/stamp_ru.qm</file>
+        <file alias="sk">locale/stamp_sk.qm</file>
+        <file alias="sv">locale/stamp_sv.qm</file>
+        <file alias="tr">locale/stamp_tr.qm</file>
+        <file alias="uk">locale/stamp_uk.qm</file>
+        <file alias="vi">locale/stamp_vi.qm</file>
+        <file alias="zh_CN">locale/stamp_zh_CN.qm</file>
+        <file alias="zh_TW">locale/stamp_zh_TW.qm</file>
+    </qresource>
+</RCC>

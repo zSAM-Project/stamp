@@ -1,0 +1,11 @@
+[Protocol]
+exec=stamp-qt '%u'
+protocol=stamp
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
