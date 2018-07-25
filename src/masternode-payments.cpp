@@ -367,7 +367,7 @@ void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::st
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (pfrom->HasFulfilledRequest("mnget")) {
                 LogPrint("masternode","mnget - peer already asked me for the list\n");
-                Misbehaving(pfrom->GetId(), 20);
+                //Misbehaving(pfrom->GetId(), 20); by xnoom
                 return;
             }
         }
