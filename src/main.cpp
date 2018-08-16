@@ -2133,20 +2133,24 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 28 * COIN;
     } else if (nHeight < 21600) {
         nSubsidy = 48 * COIN;
-    } else if (nHeight < 43200) {
-        nSubsidy = 92 * COIN;
-    } else if (nHeight < 86400) {
-        nSubsidy = 180 * COIN;
     } else if (nHeight < 129600) {
-        nSubsidy = 272 * COIN;
+        nSubsidy = 92 * COIN;
     } else if (nHeight < 172800) {
         nSubsidy = 180 * COIN;
     } else if (nHeight < 216000) {
-        nSubsidy = 92 * COIN;
+        nSubsidy = 272 * COIN;
     } else if (nHeight < 259200) {
+        nSubsidy = 180 * COIN;
+    } else if (nHeight < 302400) {
+        nSubsidy = 92 * COIN;
+    } else if (nHeight < 345600) {
         nSubsidy = 48 * COIN;
-    } else {
+    } else if (nHeight < 388800) {
         nSubsidy = 28 * COIN;
+    } else if (nHeight < 432000) {
+        nSubsidy = 16 * COIN;
+    } else {
+        nSubsidy = 4 * COIN;
     }
     return nSubsidy;
 }
@@ -2155,14 +2159,14 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 {
     int64_t ret = 0;
 
-if((nHeight >= 53281 && nHeight < 53481) || (nHeight >= 96481 && nHeight < 96681)) {
-	//200 block buffer for Masternode collateral change, preventing dumping reward to a few nodes that started earlier.
+    if((nHeight >= 139601 && nHeight < 139901) || (nHeight >= 182801 && nHeight < 183101)) {
+	//300 block buffer for Masternode collateral change, preventing dumping reward to a few nodes that started earlier.
 	ret = 1 * COIN;  
-} else if (nHeight > Params().LAST_POW_BLOCK()) {
+    } else if (nHeight > Params().LAST_POW_BLOCK()) {
         ret = blockValue  / 100 * 90;
-	//When zSAM is staked, masternode only gets 25%
+	//When zSAM is staked, masternode gets 50%
         if (isZSAMStake)
-            ret = blockValue  / 100 * 25;
+            ret = blockValue  / 100 * 50;
     } else {
 	ret = blockValue  / 100 * 0;
     }
