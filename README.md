@@ -25,7 +25,7 @@ More information at [stampcoin.club](https://stampcoin.club) Visit our ANN threa
 
 <table>
   <th>Block Height</th><th>Amount Required</th>
-  <tr><td>201-53280</td><td>1500 SAM</td></tr>
+  <tr><td>201-139600</td><td>1500 SAM</td></tr>
   <tr><td>139601-182800</td><td>15000 SAM</td></tr>
   <tr><td>182801-Infinite</td><td>30000 SAM</td></tr>
 </table>
