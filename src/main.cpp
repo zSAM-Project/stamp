@@ -2165,8 +2165,10 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     } else if (nHeight > Params().LAST_POW_BLOCK()) {
         ret = blockValue  / 100 * 90;
 	//When zSAM is staked, masternode gets 50%
-        if (isZSAMStake)
+        if (isZSAMStake && nHeight > 60000)
             ret = blockValue  / 100 * 50;
+	else
+	    ret = blockValue  / 100 * 25;
     } else {
 	ret = blockValue  / 100 * 0;
     }
