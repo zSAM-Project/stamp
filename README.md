@@ -36,8 +36,8 @@ More information at [stampcoin.club](https://stampcoin.club) Visit our ANN threa
 <th colspan=4>Genesis Block</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
 <tr><td>1</td><td>600,000 SAM</td><td>Initial Pre-mine</td></tr>
-<tr><td>2-7</td><td>1,501 SAM*</td><td>Initial 6 Masternodes for the functioning of the network.</td></tr>
-<tr><td>8-200</td><td>4 SAM**</td><td>Initialize network for smoothly PoS running.</td></tr>
+<tr><td>2-7</td><td>1,501 SAM</td><td>Initial 6 Masternodes for the functioning of the network.</td></tr>
+<tr><td>8-200</td><td>4 SAM</td><td>Initialize network for smoothly PoS running.</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
@@ -63,5 +63,5 @@ More information at [stampcoin.club](https://stampcoin.club) Visit our ANN threa
 <table>
 <th>Block Height</th><th>Masternodes</th><th>zSAM Stakers</th>
 <tr><td>201-60000</td><td>25%</td><td>75%</td></tr>
-<tr><td>60000-Infinite</td><td>50%</td><td>50%</td></tr>
+<tr><td>60001-Infinite</td><td>50%</td><td>50%</td></tr>
 </table>
