@@ -55,11 +55,20 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (    0, uint256("00000ce0e533e7ac0094536fab7fc57fc52589da9ec08d75a692e0e10e80f873"))
-    (32591, uint256("ad9004160440c09ac4aef4584fbf4890bcc84676a0203a483d931517ca18619e"));
+    (32591, uint256("ad9004160440c09ac4aef4584fbf4890bcc84676a0203a483d931517ca18619e"))
+    (33270, uint256("9a69c6296c061777739451d8b003c14f4e6e029e9335e8607dd30642942a522b"))
+    (33444, uint256("290feaadc6528e8c4fb72fd5f3444682781e247182f5fa5ef307db05ed68e570"))
+    (33480, uint256("2bb916e6ff6465aa8450cf0e813db0f5967d6cc7655a31e0477f012b65d2eea7"))
+    (33491, uint256("2f661e08d600a32b6dadca49a17a1a800abf4b4654c42982393315279e49068a"))
+    (33798, uint256("b9df8209d5f4e37a8c8e7e4d43653e61f5237271d0aa6d47202a8c7d0abfc3c9"))
+    (34000, uint256("2371d889de7c73a47768462babaf73c7bd4e4473b24518adade73d8725020114"))
+    (34100, uint256("6454098739743e601b38ee6104e3862c47eeca0e3d10c1ae18ee85bb9c732ed4"))
+    (34200, uint256("5e9df3a3d3ba899e8b23716f424f8010d9a588ab4a3aa0510634df1c177d8e10"))
+    (34524, uint256("67eaf7886613a9c98be69a16a026c1723dca031a57987c72a6806ca7428eebbd"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1534381976, // * UNIX timestamp of last checkpoint block
-    66839,      // * total number of transactions between genesis and last checkpoint
+    1534642916, // * UNIX timestamp of last checkpoint block
+    70805,      // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -176,13 +185,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xe9c29a65e7c07de3e05dcf7bb562949d443567f5c9300980195bd3f7a79374d9"));
 
 	vSeeds.push_back(CDNSSeedData("stampcoin.club", "dnsseed1.stampcoin.club"));          // dnsseed1
-        vSeeds.push_back(CDNSSeedData("stampcoin.club", "dnsseed2.stampcoin.club"));          // dnsseed2
 	vSeeds.push_back(CDNSSeedData("seed1.stampcoin.club", "seed1.stampcoin.club"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("seed2.stampcoin.club", "seed2.stampcoin.club"));       // Single node address
-	vSeeds.push_back(CDNSSeedData("seed3.stampcoin.club", "seed3.stampcoin.club"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("seed4.stampcoin.club", "seed4.stampcoin.club"));       // Single node address
-	vSeeds.push_back(CDNSSeedData("seed5.stampcoin.club", "seed5.stampcoin.club"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("seed6.stampcoin.club", "seed6.stampcoin.club"));       // Single node address
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);  // S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 139); // x or y
