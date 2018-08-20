@@ -68,11 +68,12 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (34850, uint256("a8872f25bdd616e304c8ef382c2936011f69421be83d9f89665da0556b075ae7"))
     (35000, uint256("8545bdbc4cece5667c6a4a2c0dbf4e8893dbb78554b99fe5f32b4bbfd92d3cd8"))
     (35100, uint256("b7ed56a9871c1de54fd4d226c9be4f8917e1faa22f537d57b67f90ee9722d200"))
-    (35200, uint256("7357ff2a338d26ab4b4df51c4492dd298654963df5660d19689c788a4fddae5c"));
+    (35200, uint256("7357ff2a338d26ab4b4df51c4492dd298654963df5660d19689c788a4fddae5c"))
+    (36162, uint256("17522c526307684c89a4d0fae2cfb2faf5c9d003284c3c852ddd85857a169a4f"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1534683552, // * UNIX timestamp of last checkpoint block
-    72178,      // * total number of transactions between genesis and last checkpoint
+    1534742991, // * UNIX timestamp of last checkpoint block
+    74141,      // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -156,8 +157,8 @@ public:
         nBlockEnforceInvalidUTXO = nLastPOWBlock + 1; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 0*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
         nBlockZerocoinV2 = 300; //!> The block that zerocoin v2 becomes active
-        nEnforceNewSporkKey = nBlockStartTime + 3600; //!> Sporks signed after hour must use the new spork key
-        nRejectOldSporkKey = nBlockStartTime + 7200; //!> Fully reject old spork key
+        nEnforceNewSporkKey = 1534773600; //!> Sporks signed after Monday, August 20, 2018 9:00:00 PM GMT+07:00 must use the new spork key
+        nRejectOldSporkKey = 1534777200; //!> Fully reject old spork key after Monday, August 20, 2018 10:00:00 PM GMT+07:00
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -211,8 +212,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04c5709a1c52ab478881e50343b147f8c00ef5b783d5cf4c68d50303b30dd6a0feed54475e593eb41aa48d08f14982df540357db87be0f479117b45abb9b0e7575";
-        strSporkKeyOld = "0409752a1de2cd8fed08fdcb4fe5f8db6ba2894eef7e4d589e82d5d24ddb590b3011bb648c476f6ecf96855874596385e11fd338fa010abdfafc9d0c2c09d90d8d";
+        strSporkKey = "046bc97e47b4656ccd04d08dbf4ed3f3371c607bf968fe6cd0bf8494b3d8adaa526d0c94fd49806c6ef2bdb60f40216af5bf097709052a77b02b18ecf1f57fe60b";
+        strSporkKeyOld = "04c5709a1c52ab478881e50343b147f8c00ef5b783d5cf4c68d50303b30dd6a0feed54475e593eb41aa48d08f14982df540357db87be0f479117b45abb9b0e7575";
         strObfuscationPoolDummyAddress = "SRyxzvDFrEhz3bdCrojKeao6y2WgiwUdJa";
         nStartMasternodePayments = nBlockStartTime + 7200; // after 2 hours
 
