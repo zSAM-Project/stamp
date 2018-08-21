@@ -235,10 +235,10 @@ QT_TRANSLATE_NOOP("stamp-core", ""
 QT_TRANSLATE_NOOP("stamp-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("stamp-core", "(43452 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("stamp-core", "(43451 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("stamp-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("stamp-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("stamp-core", "(must be 43452 for mainnet)"),
+QT_TRANSLATE_NOOP("stamp-core", "(must be 43451 for mainnet)"),
 QT_TRANSLATE_NOOP("stamp-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("stamp-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("stamp-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

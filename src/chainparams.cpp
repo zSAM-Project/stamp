@@ -129,7 +129,7 @@ public:
         pchMessageStart[2] = 0x4c;
         pchMessageStart[3] = 0x38;
         vAlertPubKey = ParseHex("048c9563a2fd465f506948b2fb56f7c62b3d0ae8f8f70cd3679cff0a6b86b1b9832dac56959c1f61204cac89bc09716560a4a62a5707ae3e003348220db8ca77c4");
-        nDefaultPort = 43452;
+        nDefaultPort = 43451;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // STAMP starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;

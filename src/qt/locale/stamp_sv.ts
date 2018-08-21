@@ -4902,8 +4902,8 @@ Minta antingen högre valörer (så att färre inputs behövs) eller spendera mi
         <translation>Du måste specifiera en masternodeprivkey i konfigurationen. Var vänlig se dokumentation för hjälp.</translation>
     </message>
     <message>
-        <source>(43452 could be used only on mainnet)</source>
-        <translation>(43452 kunde endast användas på mainnet)</translation>
+        <source>(43451 could be used only on mainnet)</source>
+        <translation>(43451 kunde endast användas på mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4914,8 +4914,8 @@ Minta antingen högre valörer (så att färre inputs behövs) eller spendera mi
         <translation>(standard: 1)</translation>
     </message>
     <message>
-        <source>(must be 43452 for mainnet)</source>
-        <translation>(måste vara 43452 för mainnet)</translation>
+        <source>(must be 43451 for mainnet)</source>
+        <translation>(måste vara 43451 för mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
