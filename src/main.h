@@ -58,14 +58,14 @@ struct CBlockTemplate;
 struct CNodeStateStats;
 
 inline int64_t GetMstrNodCollateral(int nHeight) {
-    if(nHeight < 53281) {
-      return 1500;
+    if(nHeight < 139601) {
+        return 1500;
     }
-    else if(nHeight < 96481) {
-      return 3000;
+    else if(nHeight < 182801) {
+        return 15000;
     }
     else {
-      return 4500;
+        return 30000;
     }
 }
 
