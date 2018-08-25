@@ -54,11 +54,17 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (   0, uint256("0x00000ce0e533e7ac0094536fab7fc57fc52589da9ec08d75a692e0e10e80f873"));
+    (   0, uint256("0x00000ce0e533e7ac0094536fab7fc57fc52589da9ec08d75a692e0e10e80f873"))
+    (   32000, uint256("12f48495317204ce5c73b5edf2833d98f49cea985613dea359e761b93970bc9a"))
+    (   33000, uint256("018abc08dd0ed34c2caa2ab9d16a3c390a9b32b6ed704a4d6b14f2f5491cfa72"))
+    (   34000, uint256("007e61cca793570870d1dbeb38d13d285465cefe7cbbbd5b62c7d6260574e892"))
+    (   35000, uint256("0ba96272d7ab48daa3c7e68ba0df7440b9eb45f16a0ca4c1a802ef2e80fe6b70"))
+    (   36000, uint256("13d432dae59ff41fb0c5c3a31e0e067aa5c4ea46ac435469e78e9ed7c277b596"))
+    (   37271, uint256("c11744b00a81ecbe29e1a32763594453afe108c3036d8f814b7fdc1fb77e2f0b"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1532408293, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1534683856, // * UNIX timestamp of last checkpoint block
+    76337,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -218,7 +224,7 @@ public:
         nMaxZerocoinSpendsPerTransaction = 7; // Assume about 20kb each
         nMinZerocoinMintFee = 1 * CENT; //high fee required for zerocoin mints
         nMintRequiredConfirmations = 20; //the maximum amount of confirmations until accumulated in 19
-        nRequiredAccumulation = 1;
+        nRequiredAccumulation = 0;
         nDefaultSecurityLevel = 100; //full security level for accumulators
         nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
         nZerocoinRequiredStakeDepth = 200; //The required confirmations for a zsam to be stakable
