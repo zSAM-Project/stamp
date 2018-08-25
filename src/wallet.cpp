@@ -2113,7 +2113,7 @@ bool CWallet::SelectStakeCoins(std::list<std::unique_ptr<CStakeInput> >& listInp
     }
 
     //zSAM
-    if (GetBoolArg("-zsamstake", true) && chainActive.Height() > Params().Zerocoin_Block_V2_Start() && !IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
+    /*if (GetBoolArg("-zsamstake", true) && chainActive.Height() > Params().Zerocoin_Block_V2_Start() && !IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         //Add zSAM
         set<CMintMeta> setMints = zsamTracker->ListMints(true, true, true);
 
@@ -2134,7 +2134,7 @@ bool CWallet::SelectStakeCoins(std::list<std::unique_ptr<CStakeInput> >& listInp
                 listInputs.emplace_back(std::move(input));
             }
         }
-    }
+    }*/
 
     return true;
 }
