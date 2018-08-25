@@ -54,26 +54,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (    0, uint256("00000ce0e533e7ac0094536fab7fc57fc52589da9ec08d75a692e0e10e80f873"))
-    (32591, uint256("ad9004160440c09ac4aef4584fbf4890bcc84676a0203a483d931517ca18619e"))
-    (33270, uint256("9a69c6296c061777739451d8b003c14f4e6e029e9335e8607dd30642942a522b"))
-    (33444, uint256("290feaadc6528e8c4fb72fd5f3444682781e247182f5fa5ef307db05ed68e570"))
-    (33480, uint256("2bb916e6ff6465aa8450cf0e813db0f5967d6cc7655a31e0477f012b65d2eea7"))
-    (33491, uint256("2f661e08d600a32b6dadca49a17a1a800abf4b4654c42982393315279e49068a"))
-    (33798, uint256("b9df8209d5f4e37a8c8e7e4d43653e61f5237271d0aa6d47202a8c7d0abfc3c9"))
-    (34000, uint256("2371d889de7c73a47768462babaf73c7bd4e4473b24518adade73d8725020114"))
-    (34100, uint256("6454098739743e601b38ee6104e3862c47eeca0e3d10c1ae18ee85bb9c732ed4"))
-    (34200, uint256("5e9df3a3d3ba899e8b23716f424f8010d9a588ab4a3aa0510634df1c177d8e10"))
-    (34524, uint256("67eaf7886613a9c98be69a16a026c1723dca031a57987c72a6806ca7428eebbd"))
-    (34850, uint256("a8872f25bdd616e304c8ef382c2936011f69421be83d9f89665da0556b075ae7"))
-    (35000, uint256("8545bdbc4cece5667c6a4a2c0dbf4e8893dbb78554b99fe5f32b4bbfd92d3cd8"))
-    (35100, uint256("b7ed56a9871c1de54fd4d226c9be4f8917e1faa22f537d57b67f90ee9722d200"))
-    (35200, uint256("7357ff2a338d26ab4b4df51c4492dd298654963df5660d19689c788a4fddae5c"))
-    (36162, uint256("17522c526307684c89a4d0fae2cfb2faf5c9d003284c3c852ddd85857a169a4f"));
+    (   0, uint256("0x00000ce0e533e7ac0094536fab7fc57fc52589da9ec08d75a692e0e10e80f873"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1534742991, // * UNIX timestamp of last checkpoint block
-    74141,      // * total number of transactions between genesis and last checkpoint
+    1532408293, // * UNIX timestamp of last checkpoint block
+    0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -129,7 +114,7 @@ public:
         pchMessageStart[2] = 0x4c;
         pchMessageStart[3] = 0x38;
         vAlertPubKey = ParseHex("048c9563a2fd465f506948b2fb56f7c62b3d0ae8f8f70cd3679cff0a6b86b1b9832dac56959c1f61204cac89bc09716560a4a62a5707ae3e003348220db8ca77c4");
-        nDefaultPort = 43451;
+        nDefaultPort = 43452;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // STAMP starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
@@ -157,8 +142,8 @@ public:
         nBlockEnforceInvalidUTXO = nLastPOWBlock + 1; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 0*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
         nBlockZerocoinV2 = 300; //!> The block that zerocoin v2 becomes active
-        nEnforceNewSporkKey = 1534773600; //!> Sporks signed after Monday, August 20, 2018 9:00:00 PM GMT+07:00 must use the new spork key
-        nRejectOldSporkKey = 1534777200; //!> Fully reject old spork key after Monday, August 20, 2018 10:00:00 PM GMT+07:00
+        nEnforceNewSporkKey = nBlockStartTime + 3600; //!> Sporks signed after hour must use the new spork key
+        nRejectOldSporkKey = nBlockStartTime + 7200; //!> Fully reject old spork key
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -190,7 +175,13 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xe9c29a65e7c07de3e05dcf7bb562949d443567f5c9300980195bd3f7a79374d9"));
 
 	vSeeds.push_back(CDNSSeedData("stampcoin.club", "dnsseed1.stampcoin.club"));          // dnsseed1
+        vSeeds.push_back(CDNSSeedData("stampcoin.club", "dnsseed2.stampcoin.club"));          // dnsseed2
 	vSeeds.push_back(CDNSSeedData("seed1.stampcoin.club", "seed1.stampcoin.club"));       // Single node address
+        vSeeds.push_back(CDNSSeedData("seed2.stampcoin.club", "seed2.stampcoin.club"));       // Single node address
+	vSeeds.push_back(CDNSSeedData("seed3.stampcoin.club", "seed3.stampcoin.club"));       // Single node address
+        vSeeds.push_back(CDNSSeedData("seed4.stampcoin.club", "seed4.stampcoin.club"));       // Single node address
+	vSeeds.push_back(CDNSSeedData("seed5.stampcoin.club", "seed5.stampcoin.club"));       // Single node address
+        vSeeds.push_back(CDNSSeedData("seed6.stampcoin.club", "seed6.stampcoin.club"));       // Single node address
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);  // S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 139); // x or y
@@ -212,8 +203,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "046bc97e47b4656ccd04d08dbf4ed3f3371c607bf968fe6cd0bf8494b3d8adaa526d0c94fd49806c6ef2bdb60f40216af5bf097709052a77b02b18ecf1f57fe60b";
-        strSporkKeyOld = "04c5709a1c52ab478881e50343b147f8c00ef5b783d5cf4c68d50303b30dd6a0feed54475e593eb41aa48d08f14982df540357db87be0f479117b45abb9b0e7575";
+        strSporkKey = "04c5709a1c52ab478881e50343b147f8c00ef5b783d5cf4c68d50303b30dd6a0feed54475e593eb41aa48d08f14982df540357db87be0f479117b45abb9b0e7575";
+        strSporkKeyOld = "0409752a1de2cd8fed08fdcb4fe5f8db6ba2894eef7e4d589e82d5d24ddb590b3011bb648c476f6ecf96855874596385e11fd338fa010abdfafc9d0c2c09d90d8d";
         strObfuscationPoolDummyAddress = "SRyxzvDFrEhz3bdCrojKeao6y2WgiwUdJa";
         nStartMasternodePayments = nBlockStartTime + 7200; // after 2 hours
 

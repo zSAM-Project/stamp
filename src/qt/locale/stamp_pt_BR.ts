@@ -3728,8 +3728,8 @@ https://www.transifex.com/zSAM-Project/zSAM-Project-translations</translation>
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(43451 could be used only on mainnet)</source>
-        <translation>(43451 could be used only on mainnet)</translation>
+        <source>(43452 could be used only on mainnet)</source>
+        <translation>(43452 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3740,8 +3740,8 @@ https://www.transifex.com/zSAM-Project/zSAM-Project-translations</translation>
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 43451 for mainnet)</source>
-        <translation>(deve ser 43451 para mainnet)</translation>
+        <source>(must be 43452 for mainnet)</source>
+        <translation>(deve ser 43452 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
